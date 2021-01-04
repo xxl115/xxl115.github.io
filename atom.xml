@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Young Bean</title>
+  
+  
+  <link href="http://xxl115.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://xxl115.github.io/"/>
+  <updated>2021-01-04T08:42:23.700Z</updated>
+  <id>http://xxl115.github.io/</id>
+  
+  <author>
+    <name>Young Bean</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>about</title>
+    <link href="http://xxl115.github.io/2021/01/04/about/"/>
+    <id>http://xxl115.github.io/2021/01/04/about/</id>
+    <published>2021-01-04T08:41:04.000Z</published>
+    <updated>2021-01-04T08:42:23.700Z</updated>
+    
+    
+    
+    
+    
+    <category term="about" scheme="http://xxl115.github.io/tags/about/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://xxl115.github.io/2021/01/04/hello-world/"/>
+    <id>http://xxl115.github.io/2021/01/04/hello-world/</id>
+    <published>2021-01-04T00:38:06.460Z</published>
+    <updated>2021-01-04T00:38:06.460Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
