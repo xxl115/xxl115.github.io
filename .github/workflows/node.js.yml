@@ -24,27 +24,34 @@ jobs:
         npm audit fix
     - name: hexo generate
       run: hexo clean && hexo g
-    # - name: git push public
-    #   working-directory: ./public
-    #   env:
-    #     GH_REF: 'github.com/xxl115/xxl115.github.io.git'
-    #   run: |
-    #     pwd 
-    #     ls
-    # - name: Commit files
-    #   working-directory: ./public
-    #   run: |
-    #     git init
-    #     git config user.name "Young Bean" 
-    #     git config user.email "xxl115@163.com"
-    #     git add .
-    #     git commit -a -m "Auto update docs by Travis CI."
-    - name: Push to Github
-      uses: x-actions/gh-pages@release/v1
+    - name: git push public
+      working-directory: ./public
       env:
-        GITHUB_EMAIL: "xxl115@163.com"
-        GITHUB_USERNAME: "xxl115"
-        PUBLISH_REPO: https://github.com/xxl115/xxl115.github.io.git
-        PUBLISH_BRANCH: master
-        PUBLISH_DIR: ./public
-        DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        GH_REF: 'github.com/xxl115/xxl115.github.io.git'
+      run: |
+        pwd 
+        ls
+    - name: Commit files
+      working-directory: ./public
+      run: |
+        git init
+        git config user.name "Young Bean" 
+        git config user.email "xxl115@163.com"
+        git add .
+        git commit -a -m "Auto update docs by Travis CI."
+    # - name: Push to Github
+    #   uses: x-actions/gh-pages@release/v1
+    #   env:
+    #     GITHUB_EMAIL: "xxl115@163.com"
+    #     GITHUB_USERNAME: "xxl115"
+    #     PUBLISH_REPO: https://github.com/xxl115/xxl115.github.io.git
+    #     PUBLISH_BRANCH: master
+    #     PUBLISH_DIR: ./public
+    #     DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+    - name: Push changes
+          uses: ad-m/github-push-action@master
+          with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            branch: master
+            force: true
+            directory: /public
