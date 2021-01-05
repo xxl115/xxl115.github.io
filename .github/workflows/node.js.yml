@@ -33,7 +33,7 @@ jobs:
     - run: cd public
     - run: pwd
     - run: ls
-    - run: cd public
+    - run: cd ./public
     - run: ls
     # - run: git init
     # - run: git config user.name "Young Bean"
