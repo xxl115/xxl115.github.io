@@ -28,7 +28,7 @@ jobs:
   push:
     steps:
     - name: git push public
-    - env:
+      env:
         GH_REF: 'github.com/xxl115/xxl115.github.io.git'
     - working-directory: ./public
     - run: pwd && ls
