@@ -29,7 +29,8 @@ jobs:
     - run: hexo clean
     - run: hexo g
     - run: pwd
-    - run: cd ../public
+    - run: ls
+    - run: cd public
     - run: ls
     # - run: git init
     # - run: git config user.name "Young Bean"
