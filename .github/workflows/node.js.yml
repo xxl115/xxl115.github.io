@@ -42,8 +42,8 @@ jobs:
     - name: Push to Github
       uses: x-actions/gh-pages@release/v1
       env:
-        GITHUB_EMAIL: "me@xiexianbin.cn"
-        GITHUB_USERNAME: "xiexianbin"
+        GITHUB_EMAIL: "xxl115@163.com"
+        GITHUB_USERNAME: "Young Bean"
         PUBLISH_REPO: https://${{ secrets.GitHub_PAT }}@github.com/xxl115/xxl115.github.io.git
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
