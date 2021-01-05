@@ -33,9 +33,12 @@ jobs:
         GH_REF: 'github.com/xxl115/xxl115.github.io.git'
       run: pwd && ls
     - name: git init
-    - run: git init
-    - run: git config user.name "Young Bean"
-    - run: git config user.email "xxl115@163.com"
-    - run: git add .
-    - run: git commit -a -m "Auto update docs by Travis CI."
-    - run: git push --force --quiet "https://${{GH_TOKEN}}@${{GH_REF}}" master:master
+      run: git init
+    - name: git config
+      run: git config user.name "Young Bean" && git config user.email "xxl115@163.com"
+    - name: git add 
+      run: git add .
+    - name: git commit
+      run: git commit -a -m "Auto update docs by Travis CI."
+    - name: git push
+      run: git push --force --quiet "https://${{GH_TOKEN}}@${{GH_REF}}" master:master
