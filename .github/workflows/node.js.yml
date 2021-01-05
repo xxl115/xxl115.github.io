@@ -6,9 +6,8 @@ on:
       - hexo
 
 jobs:
-  setup:
-    runs-on: ubuntu-latest
   build:
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: 
@@ -26,6 +25,7 @@ jobs:
     - name: hexo generate
       run: hexo clean && hexo g
   push:
+    runs-on: ubuntu-latest
     steps:
     - name: git push public
       working-directory: ./public
