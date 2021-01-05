@@ -24,9 +24,8 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: node -v
-    - run: npm -v
     - run: npm -g install hexo
+    - run: npm audit fix
     - run: hexo clean
     - run: hexo g
     - run: cd ./public
