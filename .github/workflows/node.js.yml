@@ -23,7 +23,9 @@ jobs:
         npm -g install hexo
         npm audit fix
     - name: hexo generate
-      run: hexo clean && hexo g
+      run: |
+        hexo clean 
+        hexo generate
     - name: git push public
       working-directory: ./public
       env:
@@ -31,6 +33,7 @@ jobs:
       run: |
         pwd 
         ls
+        cat index.html
     - name: Commit files
       working-directory: ./public
       run: |
