@@ -39,9 +39,12 @@ jobs:
         git config user.email "xxl115@163.com"
         git add .
         git commit -a -m "Auto update docs by Travis CI."
-    - name: Push changes
-      working-directory: ./public
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master
+    - name: Push to Github
+      uses: x-actions/gh-pages@release/v1
+      env:
+        GITHUB_EMAIL: "me@xiexianbin.cn"
+        GITHUB_USERNAME: "xiexianbin"
+        PUBLISH_REPO: https://${{ secrets.GitHub_PAT }}@github.com/xxl115/xxl115.github.io.git
+        PUBLISH_BRANCH: master
+        PUBLISH_DIR: ./public
+        # DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
