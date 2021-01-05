@@ -26,12 +26,13 @@ jobs:
       run: hexo clean && hexo g
     - name: git push public
       working-directory: ./public
-      run: pwd && ls
-    # - run: git init
-    # - run: git config user.name "Young Bean"
-    # - run: git config user.email "xxl115@163.com"
-    # - run: git add .
-    # - run: git commit -a -m "Auto update docs by Travis CI."
-    # - run: git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
+    - run: pwd 
+    - run: ls
+    - run: git init
+    - run: git config user.name "Young Bean"
+    - run: git config user.email "xxl115@163.com"
+    - run: git add .
+    - run: git commit -a -m "Auto update docs by Travis CI."
+    - run: git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
     env:
       GH_REF: 'github.com/xxl115/xxl115.github.io.git'
