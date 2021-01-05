@@ -47,4 +47,4 @@ jobs:
         PUBLISH_REPO: https://github.com/xxl115/xxl115.github.io.git
         PUBLISH_BRANCH: master
         PUBLISH_DIR: ./public
-        # DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+        DEPLOY_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
