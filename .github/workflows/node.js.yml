@@ -19,9 +19,9 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - name: Install hexo
-      run: npm -g install hexo
-    - name: npm audit fix
-      run: npm audit fix
+      run: |
+        npm -g install hexo
+        npm audit fix
     - name: hexo generate
       run: hexo clean && hexo g
     - name: git push public
@@ -32,6 +32,7 @@ jobs:
         pwd 
         ls
     - name: Commit files
+      working-directory: ./public
       run: |
         git init
         git config user.name "Young Bean" 
@@ -39,6 +40,7 @@ jobs:
         git add .
         git commit -a -m "Auto update docs by Travis CI."
     - name: Push changes
+      working-directory: ./public
       uses: ad-m/github-push-action@master
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
