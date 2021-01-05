@@ -20,14 +20,13 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - name: Install hexo
       run: npm -g install hexo
+    - name: npm audit fix
       run: npm audit fix
     - name: hexo generate
-      run: hexo clean
-      run: hexo g
+      run: hexo clean && hexo g
     - name: git push public
       working-directory: ./public
-      run: ls
-      run: pwd
+      run: pwd && ls
     # - run: git init
     # - run: git config user.name "Young Bean"
     # - run: git config user.email "xxl115@163.com"
