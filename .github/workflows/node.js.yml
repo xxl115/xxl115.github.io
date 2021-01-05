@@ -28,7 +28,7 @@ jobs:
     - run: npm audit fix
     - run: hexo clean
     - run: hexo g
-    - run: ls
+    - run: pwd
     - run: cd public
     - run: ls
     - run: git init
