@@ -24,21 +24,21 @@ jobs:
         npm audit fix
     - name: hexo generate
       run: hexo clean && hexo g
-    - name: git push public
-      working-directory: ./public
-      env:
-        GH_REF: 'github.com/xxl115/xxl115.github.io.git'
-      run: |
-        pwd 
-        ls
-    - name: Commit files
-      working-directory: ./public
-      run: |
-        git init
-        git config user.name "Young Bean" 
-        git config user.email "xxl115@163.com"
-        git add .
-        git commit -a -m "Auto update docs by Travis CI."
+    # - name: git push public
+    #   working-directory: ./public
+    #   env:
+    #     GH_REF: 'github.com/xxl115/xxl115.github.io.git'
+    #   run: |
+    #     pwd 
+    #     ls
+    # - name: Commit files
+    #   working-directory: ./public
+    #   run: |
+    #     git init
+    #     git config user.name "Young Bean" 
+    #     git config user.email "xxl115@163.com"
+    #     git add .
+    #     git commit -a -m "Auto update docs by Travis CI."
     - name: Push to Github
       uses: x-actions/gh-pages@release/v1
       env:
