@@ -28,7 +28,8 @@ jobs:
     - run: npm audit fix
     - run: hexo clean
     - run: hexo g
-    - run: cd ./public
+    - run: ls
+    - run: cd public
     - run: ls
     - run: git init
     - run: git config user.name "Young Bean"
