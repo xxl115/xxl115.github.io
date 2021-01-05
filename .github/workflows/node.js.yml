@@ -6,8 +6,9 @@ on:
       - hexo
 
 jobs:
-  build:
+  setup:
     runs-on: ubuntu-latest
+  build:
     strategy:
       matrix:
         node-version: 
@@ -24,10 +25,10 @@ jobs:
       run: npm audit fix
     - name: hexo generate
       run: hexo clean && hexo g
+  push:
     - name: git push public
-      working-directory: ./public
-    - run: pwd 
-    - run: ls
+    - working-directory: ./public
+    - run: pwd && ls
     - run: git init
     - run: git config user.name "Young Bean"
     - run: git config user.email "xxl115@163.com"
