@@ -28,10 +28,11 @@ jobs:
   push:
     steps:
     - name: git push public
+      working-directory: ./public
       env:
         GH_REF: 'github.com/xxl115/xxl115.github.io.git'
-    - working-directory: ./public
-    - run: pwd && ls
+      run: pwd && ls
+    - name: git init
     - run: git init
     - run: git config user.name "Young Bean"
     - run: git config user.email "xxl115@163.com"
