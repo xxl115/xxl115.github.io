@@ -4,39 +4,30 @@ on:
   push:
     branches: 
       - hexo
-  # pull_request:
-    # branches: [ master ]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
     strategy:
       matrix:
         node-version: 
           - 14.x
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
-
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: npm -g install hexo
-    - run: npm audit fix
-    - run: hexo clean
-    - run: hexo g
-    - run: pwd
-    - run: ls
-    - run: cd public
-    - run: pwd
-    - run: ls
-    - run: cd ./public
-    - run: ls
-    - run: cd source
-    - run: ls
+    - name: Install hexo
+      run: npm -g install hexo
+      run: npm audit fix
+    - name: hexo generate
+      run: hexo clean
+      run: hexo g
+    - name: git push public
+      working-directory: ./public
+      run: ls
+      run: pwd
     # - run: git init
     # - run: git config user.name "Young Bean"
     # - run: git config user.email "xxl115@163.com"
@@ -45,6 +36,3 @@ jobs:
     # - run: git push --force --quiet "https://${GH_TOKEN}@${GH_REF}" master:master
     env:
       GH_REF: 'github.com/xxl115/xxl115.github.io.git'
-# env:
-#  global:
-#    - GH_REF: github.com/blinkfox/blinkfox.github.io.git
