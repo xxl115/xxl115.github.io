@@ -8,11 +8,11 @@ tags:
     - GitHub Actions
 ---
 
-## GitHub 新建 xxl115.github.io 仓库
+## 1. GitHub 新建 xxl115.github.io 仓库
 
 参考 [GitHub Pages](https://pages.github.com/) 初始化仓库
 
-## 使用 hexo 生成静态博客系统
+## 2. 使用 hexo 生成静态博客系统
 
 对比 [hexo](https://hexo.io/)、 [Jekyll](https://jekyllrb.com/)、 [hugo](https://gohugo.io/) ，最后决定使用hexo。
 
@@ -80,7 +80,7 @@ draft   |   source/_drafts
 
 在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。
 
-## 选用 [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery) 主题
+## 3. 选用 [hexo-theme-matery](https://github.com/blinkfox/hexo-theme-matery) 主题
 
 通过对比和筛选，最后选择使用 hexo-theme-matery。
 
@@ -108,7 +108,7 @@ hexo-theme-matery 是一个采用 Material Design 和响应式设计的 Hexo 博
 - 支持`emoji`表情，用`markdown emoji`语法书写直接生成对应的能**跳跃**的表情。
 - 支持 [DaoVoice](http://www.daovoice.io/)、[Tidio](https://www.tidio.com/) 在线聊天功能。
 
-## 使用 GitHub Actions 自动部署静态网站
+## 4. 使用 GitHub Actions 自动部署静态网站
 
 ### 思路
 
@@ -167,6 +167,6 @@ jobs:
         directory: ./public
 ```
 
-## 使用自己的域名
+## 5.使用自己的域名
 
 在 hexo 分支 source 文件夹下新建 CNAME 文件，CNAME 文件内容为自己的域名地址 blog.boletime.com ，具体可参考 [配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site)。
