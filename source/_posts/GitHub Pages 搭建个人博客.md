@@ -167,6 +167,6 @@ jobs:
         directory: ./public
 ```
 
-## 5.使用自己的域名
+## 5. 使用自己的域名
 
 在 hexo 分支 source 文件夹下新建 CNAME 文件，CNAME 文件内容为自己的域名地址 blog.boletime.com ，具体可参考 [配置 GitHub Pages 站点的自定义域](https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site)。
