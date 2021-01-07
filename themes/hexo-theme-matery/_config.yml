@@ -188,7 +188,7 @@ mathjax:
 # 文章字数统计、阅读时长、总字数统计等
 # 文章信息--若要开启文章字数统计，需要安装 hexo-wordcount 插件，安装命令: `npm i --save hexo-wordcount`
 postInfo:
-  date: false # 发布日期
+  date: true # 发布日期
   update: true # 更新日期
   wordCount: true # 文章字数统计
   totalCount: false # 站点总文章字数
@@ -340,8 +340,6 @@ minivaline:
   placeholder: Write a Comment # Comment box placeholder
   math: true # Support MathJax.
   md: true # Support Markdown.
-  enableQQ: false # Enable QQ avatar API.
-  NoRecordIP: false # Do not record commenter IP.
   visitor: true # Article reading statistics.
   maxNest: 6 # Sub-comment maximum nesting depth.
   pageSize: 6 # Pagination size.
