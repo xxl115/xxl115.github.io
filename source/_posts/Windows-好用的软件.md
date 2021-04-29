@@ -27,3 +27,7 @@ tags:
 ## 5. Office Tool Plus
 
 [Office Tool Plus](https://github.com/YerongAI/Office-Tool)
+
+## 6. calibre-ebook(电子书阅读器)
+
+[calibre-ebook](https://calibre-ebook.com/)
