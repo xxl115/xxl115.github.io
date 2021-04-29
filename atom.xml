@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Young Bean</title>
+  
+  
+  <link href="http://xxl115.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://xxl115.github.io/"/>
+  <updated>2021-04-29T06:47:17.593Z</updated>
+  <id>http://xxl115.github.io/</id>
+  
+  <author>
+    <name>Young Bean</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Windows 好用的软件</title>
+    <link href="http://xxl115.github.io/2021/04/29/windows-hao-yong-de-ruan-jian/"/>
+    <id>http://xxl115.github.io/2021/04/29/windows-hao-yong-de-ruan-jian/</id>
+    <published>2021-04-29T10:37:11.000Z</published>
+    <updated>2021-04-29T06:47:17.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-Bitvise-SSH-Client-Linux连接工具&quot;&gt;&lt;a href=&quot;#1-Bitvise-SSH-Client-Linux连接工具&quot; class=&quot;headerlink&quot; title=&quot;1. Bitvise SSH Client</summary>
+        
+      
+    
+    
+    
+    
+    <category term="软件" scheme="http://xxl115.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="工具" scheme="http://xxl115.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Trojan-go 安装与配置</title>
+    <link href="http://xxl115.github.io/2021/01/18/trojan-go-an-zhuang-yu-pei-zhi/"/>
+    <id>http://xxl115.github.io/2021/01/18/trojan-go-an-zhuang-yu-pei-zhi/</id>
+    <published>2021-01-18T21:06:45.000Z</published>
+    <updated>2021-04-29T06:47:17.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Trojan-go 版本：0.8.2&lt;/p&gt;
+&lt;p&gt;github 地址 : &lt;a</summary>
+        
+      
+    
+    
+    
+    
+    <category term="Trojan-go" scheme="http://xxl115.github.io/tags/Trojan-go/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>好用的工具、软件、插件整理</title>
+    <link href="http://xxl115.github.io/2021/01/07/hao-yong-de-gong-ju-ruan-jian-cha-jian-zheng-li/"/>
+    <id>http://xxl115.github.io/2021/01/07/hao-yong-de-gong-ju-ruan-jian-cha-jian-zheng-li/</id>
+    <published>2021-01-07T10:43:44.000Z</published>
+    <updated>2021-04-29T06:47:17.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-CDN&quot;&gt;&lt;a href=&quot;#1-CDN&quot; class=&quot;headerlink&quot; title=&quot;1. CDN&quot;&gt;&lt;/a&gt;1. CDN&lt;/h2&gt;&lt;h3 id=&quot;jsdelivr&quot;&gt;&lt;a href=&quot;#jsdelivr&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="软件" scheme="http://xxl115.github.io/tags/%E8%BD%AF%E4%BB%B6/"/>
+    
+    <category term="工具" scheme="http://xxl115.github.io/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="插件" scheme="http://xxl115.github.io/tags/%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>GitHub Pages 搭建个人博客</title>
+    <link href="http://xxl115.github.io/2021/01/06/github-pages-da-jian-ge-ren-bo-ke/"/>
+    <id>http://xxl115.github.io/2021/01/06/github-pages-da-jian-ge-ren-bo-ke/</id>
+    <published>2021-01-06T16:08:37.000Z</published>
+    <updated>2021-04-29T06:47:17.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h2 id=&quot;1-GitHub-新建-xxl115-github-io-仓库&quot;&gt;&lt;a href=&quot;#1-GitHub-新建-xxl115-github-io-仓库&quot; class=&quot;headerlink&quot; title=&quot;1. GitHub 新建 xxl115.github.io</summary>
+        
+      
+    
+    
+    
+    
+    <category term="GitHub Pages" scheme="http://xxl115.github.io/tags/GitHub-Pages/"/>
+    
+    <category term="Hexo" scheme="http://xxl115.github.io/tags/Hexo/"/>
+    
+    <category term="hexo-theme-matery" scheme="http://xxl115.github.io/tags/hexo-theme-matery/"/>
+    
+    <category term="GitHub Actions" scheme="http://xxl115.github.io/tags/GitHub-Actions/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://xxl115.github.io/2021/01/05/hello-world/"/>
+    <id>http://xxl115.github.io/2021/01/05/hello-world/</id>
+    <published>2021-01-05T00:00:00.000Z</published>
+    <updated>2021-04-29T06:47:17.593Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
