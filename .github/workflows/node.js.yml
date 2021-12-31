@@ -23,6 +23,7 @@ jobs:
         npm install -g hexo-cli
     - name: hexo generate
       run: |
+        rm -rf node_modules && npm install --force
         hexo clean 
         hexo generate
     - name: Commit files
