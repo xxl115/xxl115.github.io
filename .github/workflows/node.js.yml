@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         node-version: 
-          - 17.x
+          - 14.x
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -21,7 +21,6 @@ jobs:
     - name: Install hexo
       run: |
         npm install -g hexo-cli
-        npm audit fix
     - name: hexo generate
       run: |
         hexo clean 
