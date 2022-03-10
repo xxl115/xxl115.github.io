@@ -160,10 +160,17 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
+# comment:
+#     type: disqus
+#     # Disqus shortname
+#     shortname: 'Young'
 comment:
-    type: disqus
-    # Disqus shortname
-    shortname: 'Young'
+    type: utterances
+    repo: xxl115/my-pic
+    # issue_term: pathname        # 必填项，与issue_number二选一填写
+    issue_number: 1             # 必填项，与issue_term二选一填写，每篇文章对应一个issue，填写前需要手动创建issue
+    label: some-issue-label     # 可选填
+    theme: github-light         # 可选填
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
@@ -335,7 +342,7 @@ plugins:
     # https://tongji.baidu.com
     baidu_analytics:
         # Baidu Analytics tracking ID
-        tracking_id: 
+        tracking_id: e53f9939fd1a6be1d15a257f981378db
     # Bing Webmaster Tools plugin settings
     # https://www.bing.com/toolbox/webmaster/
     bing_webmaster:
