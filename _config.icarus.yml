@@ -160,17 +160,10 @@ search:
     type: insight
 # Comment plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Comment/
-# comment:
-#     type: disqus
-#     # Disqus shortname
-#     shortname: 'Young'
 comment:
-    type: utterances
-    repo: xxl115/my-pic
-    # issue_term: pathname        # 必填项，与issue_number二选一填写
-    issue_number: 1             # 必填项，与issue_term二选一填写，每篇文章对应一个issue，填写前需要手动创建issue
-    label: some-issue-label     # 可选填
-    theme: github-light         # 可选填
+    type: disqus
+    # Disqus shortname
+    shortname: blog-9mviy3g3eh
 # Donate plugin configurations
 # https://ppoffice.github.io/hexo-theme-icarus/categories/Plugins/Donation/
 # donates:
