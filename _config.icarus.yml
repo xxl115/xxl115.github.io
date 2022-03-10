@@ -17,7 +17,7 @@ head:
         # when there is not enough space to display full name
         short_name: Blog
         # The start URL of the web application
-        start_url: http://blog.boletime.com/
+        start_url: http://yl.boletime.com/
         # The default theme color for the application
         theme_color: "#3273dc"
         # A placeholder background color for the application page to display
