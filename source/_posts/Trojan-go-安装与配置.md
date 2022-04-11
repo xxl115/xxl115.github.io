@@ -3,6 +3,8 @@ title: Trojan-go 安装与配置
 date: 2021-01-18 21:06:45
 tags: 
 	- Trojan-go
+categories: 
+	- 工具
 ---
 
 Trojan-go 版本：0.8.2

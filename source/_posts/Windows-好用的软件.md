@@ -4,6 +4,8 @@ date: 2021-04-29 10:37:11
 tags:
 	- 软件
 	- 工具
+categories: 
+	- 工具
 ---
 
 ## 1. Bitvise SSH Client (Linux连接工具)
