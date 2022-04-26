@@ -34,4 +34,24 @@ categories:
 24. git remote 查看远程仓库名称
 25. git remote -v 查看远程仓库名称和地址
 26. git remote origin set-url NEWURL  修改远程仓库地址
+27. git log --name-status 每次修改的文件列表，显示状态
+28. git log --name-only 每次修改的文件列表
+29. git log --stat 每次修改的文件列表，及文件修改的统计
+30. git reset HEAD~1
 
+
+
+git commit 提交规范
+
+- feat: 新功能（feature）
+- fix: 修补 bug
+- docs: 文档（documentation）
+- style: 格式（不影响代码运行的变动）
+- refactor: 重构（即不是新增功能，也不是修改 bug 的代码变动）
+- chore: 构建过程或辅助工具的变动
+- revert: 撤销，版本回退
+- perf: 性能优化
+- test：测试
+- improvement: 改进
+- build: 打包
+- ci: 持续集成
