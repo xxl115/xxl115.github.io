@@ -1,0 +1,216 @@
+<!doctype html>
+<html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta><title>GitHub Pages 搭建个人博客 - Blog - Xue YL</title><link rel="manifest" href="/manifest.json"><meta name="theme-color" content="#3273dc"><meta name="application-name" content="Blog - Xue YL"><meta name="msapplication-TileImage" content="/img/logo.png"><meta name="msapplication-TileColor" content="#3273dc"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-title" content="Blog - Xue YL"><meta name="apple-mobile-web-app-status-bar-style" content="default"><link rel="apple-touch-icon" sizes="144x144" href="/img/logo.png"><meta name="description" content="1. GitHub 新建 xxl115.github.io 仓库参考 GitHub Pages 初始化仓库 2. 使用 hexo 生成静态博客系统对比 hexo、 Jekyll、 hugo ，最后决定使用hexo。 hexo 常用命令，官方文档inithexo init [folder]  新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。 newhexo new"><meta property="og:type" content="blog"><meta property="og:title" content="GitHub Pages 搭建个人博客"><meta property="og:url" content="https://xxl115.github.io/2021/01/06/GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><meta property="og:site_name" content="Blog - Xue YL"><meta property="og:description" content="1. GitHub 新建 xxl115.github.io 仓库参考 GitHub Pages 初始化仓库 2. 使用 hexo 生成静态博客系统对比 hexo、 Jekyll、 hugo ，最后决定使用hexo。 hexo 常用命令，官方文档inithexo init [folder]  新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。 newhexo new"><meta property="og:locale" content="zh_CN"><meta property="og:image" content="https://xxl115.github.io/img/og_image.png"><meta property="article:published_time" content="2021-01-06T16:08:37.000Z"><meta property="article:modified_time" content="2022-06-12T09:54:15.134Z"><meta property="article:author" content="Xue YL"><meta property="article:tag" content="GitHub Pages"><meta property="article:tag" content="Hexo"><meta property="article:tag" content="hexo-theme-matery"><meta property="article:tag" content="GitHub Actions"><meta property="twitter:card" content="summary"><meta property="twitter:image" content="/img/og_image.png"><script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"https://xxl115.github.io/2021/01/06/GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"},"headline":"GitHub Pages 搭建个人博客","image":["https://xxl115.github.io/img/og_image.png"],"datePublished":"2021-01-06T16:08:37.000Z","dateModified":"2022-06-12T09:54:15.134Z","author":{"@type":"Person","name":"Xue YL"},"publisher":{"@type":"Organization","name":"Blog - Xue YL","logo":{"@type":"ImageObject","url":"https://xxl115.github.io/img/logo.png"}},"description":"1. GitHub 新建 xxl115.github.io 仓库参考 GitHub Pages 初始化仓库 2. 使用 hexo 生成静态博客系统对比 hexo、 Jekyll、 hugo ，最后决定使用hexo。 hexo 常用命令，官方文档inithexo init [folder]  新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。 newhexo new"}</script><link rel="canonical" href="https://xxl115.github.io/2021/01/06/GitHub%20Pages%20%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/"><link rel="icon" href="/img/logo.png"><link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/highlight.js@9.12.0/styles/atom-one-light.css"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;600&amp;family=Source+Code+Pro"><link rel="stylesheet" href="/css/default.css"><style>body>.footer,body>.navbar,body>.section{opacity:0}</style><!--!--><script>var _hmt = _hmt || [];
+        (function() {
+            var hm = document.createElement("script");
+            hm.src = "//hm.baidu.com/hm.js?e53f9939fd1a6be1d15a257f981378db";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();</script><!--!--><!--!--><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/css/justifiedGallery.min.css"><!--!--><!--!--><style>.pace{-webkit-pointer-events:none;pointer-events:none;-webkit-user-select:none;-moz-user-select:none;user-select:none}.pace-inactive{display:none}.pace .pace-progress{background:#3273dc;position:fixed;z-index:2000;top:0;right:100%;width:100%;height:2px}</style><script src="https://cdn.jsdelivr.net/npm/pace-js@1.2.4/pace.min.js"></script><!--!--><!--!--><!-- hexo injector head_end start --><script>
+  (function () {
+      function switchTab() {
+          if (!location.hash) {
+            return;
+          }
+          Array
+              .from(document.querySelectorAll('.tab-content'))
+              .forEach($tab => {
+                  $tab.classList.add('is-hidden');
+              });
+          Array
+              .from(document.querySelectorAll('.tabs li'))
+              .forEach($tab => {
+                  $tab.classList.remove('is-active');
+              });
+          const $activeTab = document.querySelector(location.hash);
+          if ($activeTab) {
+              $activeTab.classList.remove('is-hidden');
+          }
+          const $tabMenu = document.querySelector(`a[href="${location.hash}"]`);
+          if ($tabMenu) {
+              $tabMenu.parentElement.classList.add('is-active');
+          }
+      }
+      switchTab();
+      window.addEventListener('hashchange', switchTab, false);
+  })();
+  </script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 6.2.0"></head><body class="is-3-column"><nav class="navbar navbar-main"><div class="container"><div class="navbar-brand justify-content-center"><a class="navbar-item navbar-logo" href="/"><img src="/img/logo.png" alt="Blog - Xue YL" height="28"></a></div><div class="navbar-menu"><div class="navbar-start"><a class="navbar-item" href="/">Home</a><a class="navbar-item" href="/archives">Archives</a><a class="navbar-item" href="/categories">Categories</a><a class="navbar-item" href="/tags">Tags</a><a class="navbar-item" href="/about">About</a></div><div class="navbar-end"><a class="navbar-item" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/xxl115/xxl115.github.io"><i class="fab fa-github"></i></a><a class="navbar-item search" title="搜索" href="javascript:;"><i class="fas fa-search"></i></a></div></div></div></nav><section class="section"><div class="container"><div class="columns"><div class="column order-2 column-main is-8-tablet is-8-desktop is-6-widescreen"><div class="card"><article class="card-content article" role="article"><div class="article-meta is-size-7 is-uppercase level is-mobile"><div class="level-left"><span class="level-item"><time dateTime="2021-01-06T16:08:37.000Z" title="1/6/2021, 4:08:37 PM">2021-01-06</time>发表</span><span class="level-item"><time dateTime="2022-06-12T09:54:15.134Z" title="6/12/2022, 9:54:15 AM">2022-06-12</time>更新</span><span class="level-item">7 分钟读完 (大约1117个字)</span></div></div><h1 class="title is-3 is-size-4-mobile">GitHub Pages 搭建个人博客</h1><div class="content"><h2 id="1-GitHub-新建-xxl115-github-io-仓库"><a href="#1-GitHub-新建-xxl115-github-io-仓库" class="headerlink" title="1. GitHub 新建 xxl115.github.io 仓库"></a>1. GitHub 新建 xxl115.github.io 仓库</h2><p>参考 <a target="_blank" rel="noopener" href="https://pages.github.com/">GitHub Pages</a> 初始化仓库</p>
+<h2 id="2-使用-hexo-生成静态博客系统"><a href="#2-使用-hexo-生成静态博客系统" class="headerlink" title="2. 使用 hexo 生成静态博客系统"></a>2. 使用 hexo 生成静态博客系统</h2><p>对比 <a target="_blank" rel="noopener" href="https://hexo.io/">hexo</a>、 <a target="_blank" rel="noopener" href="https://jekyllrb.com/">Jekyll</a>、 <a target="_blank" rel="noopener" href="https://gohugo.io/">hugo</a> ，最后决定使用hexo。</p>
+<h3 id="hexo-常用命令，官方文档"><a href="#hexo-常用命令，官方文档" class="headerlink" title="hexo 常用命令，官方文档"></a>hexo 常用命令，<a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/docs/commands">官方文档</a></h3><h4 id="init"><a href="#init" class="headerlink" title="init"></a>init</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo init <span class="token punctuation">[</span>folder<span class="token punctuation">]</span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>新建一个网站。如果没有设置 folder ，Hexo 默认在目前的文件夹建立网站。</p>
+<h4 id="new"><a href="#new" class="headerlink" title="new"></a>new</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo new <span class="token punctuation">[</span>layout<span class="token punctuation">]</span> <span class="token operator">&lt;</span>title<span class="token operator">></span><span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>新建一篇文章。如果没有设置 layout 的话，默认使用 _config.yml 中的 default_layout 参数代替。如果标题包含空格的话，请使用引号括起来。</p>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-p, –path</td>
+<td>自定义新文章的路径</td>
+</tr>
+<tr>
+<td>-r, –replace</td>
+<td>如果存在同名文章，将其替换</td>
+</tr>
+<tr>
+<td>-s, –slug</td>
+<td>文章的 Slug，作为新文章的文件名和发布后的 URL</td>
+</tr>
+</tbody></table>
+<p>layout 三种默认布局：post、page 和 draft。在创建这三种不同类型的文件时，它们将会被保存到不同的路径；而您自定义的其他布局和 post 相同，都将储存到 source&#x2F;_posts 文件夹。</p>
+<table>
+<thead>
+<tr>
+<th>layout</th>
+<th>path</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>post</td>
+<td>source&#x2F;_posts</td>
+</tr>
+<tr>
+<td>page</td>
+<td>source</td>
+</tr>
+<tr>
+<td>draft</td>
+<td>source&#x2F;_drafts</td>
+</tr>
+</tbody></table>
+<h4 id="generate"><a href="#generate" class="headerlink" title="generate"></a>generate</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo generate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>生成静态网站。</p>
+<p>该命令可以简写为</p>
+<pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo g<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<h4 id="server"><a href="#server" class="headerlink" title="server"></a>server</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo server<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>启动服务器。默认情况下，访问网址为： <a target="_blank" rel="noopener" href="http://localhost:4000/%E3%80%82">http://localhost:4000/。</a></p>
+<h4 id="clean"><a href="#clean" class="headerlink" title="clean"></a>clean</h4><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash">hexo clean<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
+<p>清除缓存文件 (db.json) 和已生成的静态文件 (public)。</p>
+<p>在某些情况（尤其是更换主题后），如果发现您对站点的更改无论如何也不生效，您可能需要运行该命令。</p>
+<h2 id="3-选用-hexo-theme-matery-主题"><a href="#3-选用-hexo-theme-matery-主题" class="headerlink" title="3. 选用 hexo-theme-matery 主题"></a>3. 选用 <a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery">hexo-theme-matery</a> 主题</h2><p>通过对比和筛选，最后选择使用 hexo-theme-matery。</p>
+<p>hexo-theme-matery 是一个采用 Material Design 和响应式设计的 Hexo 博客主题。</p>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><ul>
+<li>简单漂亮，文章内容美观易读</li>
+<li><a target="_blank" rel="noopener" href="https://material.io/">Material Design</a> 设计</li>
+<li>响应式设计，博客在桌面端、平板、手机等设备上均能很好的展现</li>
+<li>首页轮播文章及每天动态切换 <code>Banner</code> 图片</li>
+<li>瀑布流式的博客文章列表（文章无特色图片时会有 <code>24</code> 张漂亮的图片代替）</li>
+<li>时间轴式的归档页</li>
+<li><strong>词云</strong>的标签页和<strong>雷达图</strong>的分类页</li>
+<li>丰富的关于我页面（包括关于我、文章统计图、我的项目、我的技能、相册等）</li>
+<li>可自定义的数据的友情链接页面</li>
+<li>支持文章置顶和文章打赏</li>
+<li>支持 <code>MathJax</code></li>
+<li><code>TOC</code> 目录</li>
+<li>可设置复制文章内容时追加版权信息</li>
+<li>可设置阅读文章时做密码验证</li>
+<li><a target="_blank" rel="noopener" href="https://gitalk.github.io/">Gitalk</a>、<a target="_blank" rel="noopener" href="https://imsun.github.io/gitment/">Gitment</a>、<a target="_blank" rel="noopener" href="https://valine.js.org/">Valine</a> 和 <a target="_blank" rel="noopener" href="https://disqus.com/">Disqus</a> 评论模块（推荐使用 <code>Gitalk</code>）</li>
+<li>集成了<a target="_blank" rel="noopener" href="http://busuanzi.ibruce.info/">不蒜子统计</a>、谷歌分析（<code>Google Analytics</code>）和文章字数统计等功能</li>
+<li>支持在首页的音乐播放和视频播放功能</li>
+<li>支持<code>emoji</code>表情，用<code>markdown emoji</code>语法书写直接生成对应的能<strong>跳跃</strong>的表情。</li>
+<li>支持 <a target="_blank" rel="noopener" href="http://www.daovoice.io/">DaoVoice</a>、<a target="_blank" rel="noopener" href="https://www.tidio.com/">Tidio</a> 在线聊天功能。</li>
+</ul>
+<h2 id="4-使用-GitHub-Actions-自动部署静态网站"><a href="#4-使用-GitHub-Actions-自动部署静态网站" class="headerlink" title="4. 使用 GitHub Actions 自动部署静态网站"></a>4. 使用 GitHub Actions 自动部署静态网站</h2><h3 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h3><ul>
+<li>在hexo分支，使用 hexo g 生成静态文件</li>
+<li>将静态文件提交至 master 分支，通过域名就可以访问</li>
+</ul>
+<h3 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h3><p>通过 Github Actions 中 workflow 自动化执行，在 hexo 分支根目录新建文件夹 .github\workflows ，在该文件中新建 node.js.yml 文件，每当 push 到该分支都会 CI 。</p>
+<p>node.js.yml</p>
+<pre class="line-numbers language-yaml" data-language="yaml"><code class="language-yaml"><span class="token key atrule">name</span><span class="token punctuation">:</span> Node.js CI
+
+<span class="token key atrule">on</span><span class="token punctuation">:</span>
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span> 
+      <span class="token punctuation">-</span> hexo
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">strategy</span><span class="token punctuation">:</span>
+      <span class="token key atrule">matrix</span><span class="token punctuation">:</span>
+        <span class="token key atrule">node-version</span><span class="token punctuation">:</span> 
+          <span class="token punctuation">-</span> 14.x
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v2
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Use Node.js $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> matrix.node<span class="token punctuation">-</span>version <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/setup<span class="token punctuation">-</span>node@v1
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">node-version</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> matrix.node<span class="token punctuation">-</span>version <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Install hexo
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        npm -g install hexo
+        npm audit fix</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> hexo generate
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        hexo clean 
+        hexo generate</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Commit files
+      <span class="token key atrule">working-directory</span><span class="token punctuation">:</span> ./public
+      <span class="token key atrule">run</span><span class="token punctuation">:</span> <span class="token punctuation">|</span><span class="token scalar string">
+        git init
+        git config user.name "Young Bean" 
+        git config user.email "xxl115@163.com"
+        git add .
+        git commit -a -m "Auto update docs by Travis CI."</span>
+    <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> Push changes
+      <span class="token key atrule">uses</span><span class="token punctuation">:</span> ad<span class="token punctuation">-</span>m/github<span class="token punctuation">-</span>push<span class="token punctuation">-</span>action@master
+      <span class="token key atrule">with</span><span class="token punctuation">:</span>
+        <span class="token key atrule">github_token</span><span class="token punctuation">:</span> $<span class="token punctuation">&#123;</span><span class="token punctuation">&#123;</span> secrets.GITHUB_TOKEN <span class="token punctuation">&#125;</span><span class="token punctuation">&#125;</span>
+        <span class="token key atrule">branch</span><span class="token punctuation">:</span> master
+        <span class="token key atrule">force</span><span class="token punctuation">:</span> <span class="token boolean important">true</span>
+        <span class="token key atrule">directory</span><span class="token punctuation">:</span> ./public<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+<h2 id="5-使用自己的域名"><a href="#5-使用自己的域名" class="headerlink" title="5. 使用自己的域名"></a>5. 使用自己的域名</h2><p>在 hexo 分支 source 文件夹下新建 CNAME 文件，CNAME 文件内容为自己的域名地址 blog.boletime.com ，具体可参考 <a target="_blank" rel="noopener" href="https://docs.github.com/cn/free-pro-team@latest/github/working-with-github-pages/configuring-a-custom-domain-for-your-github-pages-site">配置 GitHub Pages 站点的自定义域</a>。</p>
+</div><div class="article-licensing box"><div class="licensing-title"><p>GitHub Pages 搭建个人博客</p><p><a href="https://xxl115.github.io/2021/01/06/GitHub Pages 搭建个人博客/">https://xxl115.github.io/2021/01/06/GitHub Pages 搭建个人博客/</a></p></div><div class="licensing-meta level is-mobile"><div class="level-left"><div class="level-item is-narrow"><div><h6>作者</h6><p>Xue YL</p></div></div><div class="level-item is-narrow"><div><h6>发布于</h6><p>2021-01-06</p></div></div><div class="level-item is-narrow"><div><h6>更新于</h6><p>2022-06-12</p></div></div><div class="level-item is-narrow"><div><h6>许可协议</h6><p><a class="icons" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="icon fab fa-creative-commons"></i></a><a class="icons" rel="noopener" target="_blank" title="Attribution" href="https://creativecommons.org/licenses/by/4.0/"><i class="icon fab fa-creative-commons-by"></i></a><a class="icons" rel="noopener" target="_blank" title="Noncommercial" href="https://creativecommons.org/licenses/by-nc/4.0/"><i class="icon fab fa-creative-commons-nc"></i></a></p></div></div></div></div></div><div class="article-tags is-size-7 mb-4"><span class="mr-2">#</span><a class="link-muted mr-2" rel="tag" href="/tags/GitHub-Pages/">GitHub Pages</a><a class="link-muted mr-2" rel="tag" href="/tags/Hexo/">Hexo</a><a class="link-muted mr-2" rel="tag" href="/tags/hexo-theme-matery/">hexo-theme-matery</a><a class="link-muted mr-2" rel="tag" href="/tags/GitHub-Actions/">GitHub Actions</a></div><div class="a2a_kit a2a_kit_size_32 a2a_default_style"><a class="a2a_dd" target="_blank" rel="noopener" href="https://www.addtoany.com/share"></a><a class="a2a_button_wechat"></a><a class="a2a_button_sina_weibo"></a><a class="a2a_button_facebook"></a><a class="a2a_button_twitter"></a><a class="a2a_button_email"></a><a class="a2a_button_google_gmail"></a><a class="a2a_button_reddit"></a><a class="a2a_button_douban"></a></div><script src="https://static.addtoany.com/menu/page.js" defer></script></article></div><!--!--><nav class="post-navigation mt-4 level is-mobile"><div class="level-start"><a class="article-nav-prev level level-item link-muted" href="/2021/01/07/%E5%A5%BD%E7%94%A8%E7%9A%84%E5%B7%A5%E5%85%B7%E3%80%81%E8%BD%AF%E4%BB%B6%E3%80%81%E6%8F%92%E4%BB%B6%E6%95%B4%E7%90%86/"><i class="level-item fas fa-chevron-left"></i><span class="level-item">好用的工具、软件、插件整理</span></a></div></nav><!--!--></div><div class="column column-left is-4-tablet is-4-desktop is-3-widescreen  order-1"><div class="card widget" data-type="profile"><div class="card-content"><nav class="level"><div class="level-item has-text-centered flex-shrink-1"><div><figure class="image is-128x128 mx-auto mb-2"><img class="avatar" src="/img/logo.png" alt="XUE YL"></figure><p class="title is-size-4 is-block" style="line-height:inherit;">XUE YL</p><p class="is-size-6 is-block">Java Developer</p><p class="is-size-6 is-flex justify-content-center"><i class="fas fa-map-marker-alt mr-1"></i><span>Beijing, China, Earth</span></p></div></div></nav><nav class="level is-mobile"><div class="level-item has-text-centered is-marginless"><div><p class="heading">文章</p><a href="/archives"><p class="title">9</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">分类</p><a href="/categories"><p class="title">3</p></a></div></div><div class="level-item has-text-centered is-marginless"><div><p class="heading">标签</p><a href="/tags"><p class="title">11</p></a></div></div></nav><div class="level"><a class="level-item button is-primary is-rounded" href="http://blog.boletime.com/" target="_blank" rel="noopener">关注我</a></div><div class="level is-mobile is-multiline"><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Github" href="https://github.com/ppoffice"><i class="fab fa-github"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Facebook" href="https://facebook.com"><i class="fab fa-facebook"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Twitter" href="https://twitter.com"><i class="fab fa-twitter"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="Dribbble" href="https://dribbble.com"><i class="fab fa-dribbble"></i></a><a class="level-item button is-transparent is-marginless" target="_blank" rel="noopener" title="RSS" href="/"><i class="fas fa-rss"></i></a></div></div></div><!--!--><div class="card widget" data-type="links"><div class="card-content"><div class="menu"><h3 class="menu-label">链接</h3><ul class="menu-list"><li><a class="level is-mobile" href="https://hexo.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Hexo</span></span><span class="level-right"><span class="level-item tag">hexo.io</span></span></a></li><li><a class="level is-mobile" href="https://bulma.io" target="_blank" rel="noopener"><span class="level-left"><span class="level-item">Bulma</span></span><span class="level-right"><span class="level-item tag">bulma.io</span></span></a></li></ul></div></div></div><div class="card widget" data-type="categories"><div class="card-content"><div class="menu"><h3 class="menu-label">分类</h3><ul class="menu-list"><li><a class="level is-mobile" href="/categories/Hello-World/"><span class="level-start"><span class="level-item">Hello World</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/categories/%E5%B7%A5%E5%85%B7/"><span class="level-start"><span class="level-item">工具</span></span><span class="level-end"><span class="level-item tag">6</span></span></a></li><li><a class="level is-mobile" href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/"><span class="level-start"><span class="level-item">问题记录</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li></ul></div></div></div><div class="column-right-shadow is-hidden-widescreen is-sticky"></div></div><div class="column column-right is-4-tablet is-4-desktop is-3-widescreen is-hidden-touch is-hidden-desktop-only order-3 is-sticky"><div class="card widget" data-type="recent-posts"><div class="card-content"><h3 class="menu-label">最新文章</h3><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-12T17:43:19.000Z">2022-06-12</time></p><p class="title"><a href="/2022/06/12/question/No%20appropriate%20protocol%20(protocol%20is%20disabled%20or%20cipher%20suites%20are%20%20%20inappropriate/">No appropriate protocol (protocol is disabled or cipher suites are inappropriate</a></p><p class="categories"><a href="/categories/%E9%97%AE%E9%A2%98%E8%AE%B0%E5%BD%95/">问题记录</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-06-12T09:54:15.134Z">2022-06-12</time></p><p class="title"><a href="/2022/06/12/hello-world/">Hello World</a></p><p class="categories"><a href="/categories/Hello-World/">Hello World</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T18:48:15.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/%E5%91%BD%E4%BB%A4%E8%A1%8C%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E8%AE%B0%E5%BD%95/">命令行常用命令记录</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T10:05:12.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/powershell-%E5%BF%AB%E6%8D%B7%E9%94%AE-%E6%94%B6%E8%97%8F%E5%9B%BE%E7%89%87/">powershell 快捷键 收藏图片</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></p></div></article><article class="media"><div class="media-content"><p class="date"><time dateTime="2022-04-11T09:24:48.000Z">2022-04-11</time></p><p class="title"><a href="/2022/04/11/git-%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">git 常用命令</a></p><p class="categories"><a href="/categories/%E5%B7%A5%E5%85%B7/">工具</a></p></div></article></div></div><div class="card widget" data-type="archives"><div class="card-content"><div class="menu"><h3 class="menu-label">归档</h3><ul class="menu-list"><li><a class="level is-mobile" href="/archives/2022/06/"><span class="level-start"><span class="level-item">六月 2022</span></span><span class="level-end"><span class="level-item tag">2</span></span></a></li><li><a class="level is-mobile" href="/archives/2022/04/"><span class="level-start"><span class="level-item">四月 2022</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/04/"><span class="level-start"><span class="level-item">四月 2021</span></span><span class="level-end"><span class="level-item tag">1</span></span></a></li><li><a class="level is-mobile" href="/archives/2021/01/"><span class="level-start"><span class="level-item">一月 2021</span></span><span class="level-end"><span class="level-item tag">3</span></span></a></li></ul></div></div></div><div class="card widget" data-type="tags"><div class="card-content"><div class="menu"><h3 class="menu-label">标签</h3><div class="field is-grouped is-grouped-multiline"><div class="control"><a class="tags has-addons" href="/tags/GitHub-Actions/"><span class="tag">GitHub Actions</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/GitHub-Pages/"><span class="tag">GitHub Pages</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Hexo/"><span class="tag">Hexo</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Java/"><span class="tag">Java</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/Trojan-go/"><span class="tag">Trojan-go</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/git/"><span class="tag">git</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/hexo-theme-matery/"><span class="tag">hexo-theme-matery</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%91%BD%E4%BB%A4%E8%A1%8C/"><span class="tag">命令行</span><span class="tag">1</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E5%B7%A5%E5%85%B7/"><span class="tag">工具</span><span class="tag">6</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E6%8F%92%E4%BB%B6/"><span class="tag">插件</span><span class="tag">2</span></a></div><div class="control"><a class="tags has-addons" href="/tags/%E8%BD%AF%E4%BB%B6/"><span class="tag">软件</span><span class="tag">3</span></a></div></div></div></div></div></div></div></div></section><footer class="footer"><div class="container"><div class="level"><div class="level-start"><a class="footer-logo is-block mb-2" href="/"><img src="/img/logo.png" alt="Blog - Xue YL" height="28"></a><p class="is-size-7"><span>&copy; 2022 Xue YL</span>  Powered by <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a> &amp; <a href="https://github.com/ppoffice/hexo-theme-icarus" target="_blank" rel="noopener">Icarus</a></p></div><div class="level-end"><div class="field has-addons"><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Attribution 4.0 International" href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons-by"></i></a></p><p class="control"><a class="button is-transparent is-large" target="_blank" rel="noopener" title="Download on GitHub" href="https://github.com/ppoffice/hexo-theme-icarus"><i class="fab fa-github"></i></a></p></div></div></div></div></footer><script src="https://cdn.jsdelivr.net/npm/jquery@3.3.1/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/moment@2.22.2/min/moment-with-locales.min.js"></script><script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.4/dist/clipboard.min.js" defer></script><script>moment.locale("zh-CN");</script><script>var IcarusThemeSettings = {
+            article: {
+                highlight: {
+                    clipboard: true,
+                    fold: 'unfolded'
+                }
+            }
+        };</script><script src="/js/column.js"></script><script src="/js/animation.js"></script><a id="back-to-top" title="回到顶端" href="javascript:;"><i class="fas fa-chevron-up"></i></a><script src="/js/back_to_top.js" defer></script><!--!--><!--!--><!--!--><script src="https://cdn.jsdelivr.net/npm/cookieconsent@3.1.1/build/cookieconsent.min.js" defer></script><script>window.addEventListener("load", () => {
+      window.cookieconsent.initialise({
+        type: "info",
+        theme: "edgeless",
+        static: false,
+        position: "bottom-left",
+        content: {
+          message: "此网站使用Cookie来改善您的体验。",
+          dismiss: "知道了！",
+          allow: "允许使用Cookie",
+          deny: "拒绝",
+          link: "了解更多",
+          policy: "Cookie政策",
+          href: "https://www.cookiesandyou.com/",
+        },
+        palette: {
+          popup: {
+            background: "#edeff5",
+            text: "#838391"
+          },
+          button: {
+            background: "#4b81e8"
+          },
+        },
+      });
+    });</script><script src="https://cdn.jsdelivr.net/npm/lightgallery@1.10.0/dist/js/lightgallery.min.js" defer></script><script src="https://cdn.jsdelivr.net/npm/justifiedGallery@3.8.1/dist/js/jquery.justifiedGallery.min.js" defer></script><script>window.addEventListener("load", () => {
+            if (typeof $.fn.lightGallery === 'function') {
+                $('.article').lightGallery({ selector: '.gallery-item' });
+            }
+            if (typeof $.fn.justifiedGallery === 'function') {
+                if ($('.justified-gallery > p > .gallery-item').length) {
+                    $('.justified-gallery > p > .gallery-item').unwrap();
+                }
+                $('.justified-gallery').justifiedGallery();
+            }
+        });</script><!--!--><!--!--><!--!--><!--!--><!--!--><script src="/js/main.js" defer></script><div class="searchbox"><div class="searchbox-container"><div class="searchbox-header"><div class="searchbox-input-container"><input class="searchbox-input" type="text" placeholder="想要查找什么..."></div><a class="searchbox-close" href="javascript:;">×</a></div><div class="searchbox-body"></div></div></div><script src="/js/insight.js" defer></script><script>document.addEventListener('DOMContentLoaded', function () {
+            loadInsight({"contentUrl":"/content.json"}, {"hint":"想要查找什么...","untitled":"(无标题)","posts":"文章","pages":"页面","categories":"分类","tags":"标签"});
+        });</script></body></html>
